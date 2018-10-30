@@ -1805,7 +1805,7 @@ header {
 
 .p-relative {
     position: relative;
-    border: solid 1px black;
+    border: solid 1px #EEE;
     height: 580px;
     overflow: hidden;
 }
@@ -1854,6 +1854,39 @@ header {
     margin: 0 auto;
     width: 100%;
     z-index: -1;
+}
+
+.s-new {
+    border: none;
+    padding: 10px;
+}
+
+.s-new i {
+    position: static;
+}
+
+.s-new .head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: center;
+}
+
+.s-new .head h3 {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.simplebar-content {
+    position: static !important;
+}
+
+.simplebar-height-auto-observer-wrapper {
+    position: static !important;
+}
+
+[data-simplebar] {
+    position: static !important;
 }
 
 @media only screen and (max-width: 768px) {
