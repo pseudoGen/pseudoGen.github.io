@@ -1,4 +1,3 @@
-
 (function($) {
 	"use strict"
 
@@ -6,6 +5,7 @@
 	///////////////////////////
 	// Preloader
 	$(window).on('load', function() {
+		alert('sdfgds')
 		$("#preloader").delay(600).fadeOut();
 	});
 
@@ -34,10 +34,9 @@
 
 	///////////////////////////
 	// Btn nav collapse
-	$('#nav .nav-collapse').on('click', function() {
+	$('#nav-collapse').on('click', function() {
 		$('#nav').toggleClass('open');
 	});
-
 	///////////////////////////
 	// Mobile dropdown
 	$('.has-dropdown a').on('click', function() {
