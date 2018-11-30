@@ -1902,6 +1902,14 @@ header {
     }
 }
 
+@media only screen and (max-width: 768px) {
+    .p-deep p{
+        text-align: center;
+    }
+}
+
+
+
 #map {
     height: 400px;
     margin-bottom: 15px;
@@ -1924,7 +1932,6 @@ header {
         background-position: 100% 0;
     }
 }
-
 
 .buy-now .btn {
     overflow: visible;
@@ -1986,11 +1993,48 @@ header {
     animation: stripe-slide 12s infinite linear forwards;
 }
 
-
 .buy-now .btn--radius {
     border-radius: 36px;
 }
-.buy-now{
+
+.buy-now {
     display: flex;
     justify-content: center;
+}
+
+.quotes {
+    padding-bottom: 20px;
+}
+
+.quotes .cont {
+    height: 100px;
+    border: solid 1px black;
+    margin-bottom: 10px;
+    background-color: #354052;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 23%;
+    border-radius: 5px;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.cont p {
+    color: wheat;
+    text-align: center;
+    margin: 0
+}
+
+@media only screen and (max-width: 768px) {
+    .list {
+        flex-direction: column;
+    }
+    .quotes .cont {
+        flex: 1;
+    }
 }
