@@ -94,6 +94,7 @@ p {
     font-family: Cabin Sketch;
     color: black;
     font-size: 12px;
+    text-align: justify;
 }
 
 a:hover, a:focus {
@@ -1903,12 +1904,10 @@ header {
 }
 
 @media only screen and (max-width: 768px) {
-    .p-deep p{
+    .p-deep p {
         text-align: center;
     }
 }
-
-
 
 #map {
     height: 400px;
@@ -2002,10 +2001,6 @@ header {
     justify-content: center;
 }
 
-.quotes {
-    padding-bottom: 20px;
-}
-
 .quotes .cont {
     height: 100px;
     border: solid 1px black;
@@ -2014,7 +2009,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-basis: 23%;
+    flex-basis: 30%;
     border-radius: 5px;
 }
 
@@ -2037,4 +2032,41 @@ header {
     .quotes .cont {
         flex: 1;
     }
+}
+
+.product-desc {
+    display: flex;
+    margin-top: 10px;
+    flex-direction: column;
+}
+
+.product-desc .desc {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-desc .desc h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.product-desc .img {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.product-desc .img img {
+    width: 75%;
+    height: auto;
+}
+
+.adress h1 {
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.adress {
+    padding: 20%;
 }
