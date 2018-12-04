@@ -141,8 +141,8 @@ ul, ol {
 }
 
 .md-padding {
-    padding-top: 42px;
-    padding-bottom: 42px;
+    padding-top: 55px;
+    /* padding-bottom: 42px; */
 }
 
 .sm-padding {
@@ -2030,6 +2030,9 @@ header {
 @media only screen and (max-width: 768px) {
     .list {
         flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 0;
     }
     .quotes .cont {
         flex: 1;
@@ -2079,4 +2082,30 @@ header {
 
 .contact p {
     text-align: center;
+}
+.quote-img{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+}
+.quote-img img{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+}
+.small-h{
+    font-size: 20px !important;
+}
+p{
+    font-size: 15px ;
+}
+@media only screen and (max-width: 768px) {
+    p{
+        font-size: 13px ;
+    }
+}
+.story{
+    margin-bottom: 5%;
+    padding-bottom: 5%;
 }
