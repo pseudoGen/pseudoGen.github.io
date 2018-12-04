@@ -43,9 +43,7 @@
 	<![endif]-->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
 	<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.js"></script>
-</head>
-
-<body id="body">
+	<script type=”text/javascript” src=”//cdn.jsdelivr.net/afterglow/latest/afterglow.min.js”> </script> </head> <body id="body">
 	<!-- Header -->
 	<header id="home">
 		<!-- Background Image -->
@@ -369,15 +367,15 @@
 			<button class="btn btn--stripe btn--radius">Buy Now</button>
 		</div>
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-8">
 				<div id="map"></div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div class="adress">
 					<h1>Adress</h1>
-					<span>7th floor &#44 Ganga</span><br>
-					<span>calicut &#44 Cyberpark</span><br>
-					<span>Trivandrum &#8208 673103</span>
+					<span id="landmark">7th floor &#44 Ganga</span><br>
+					<span id='place-adress'>calicut &#44 Cyberpark</span><br>
+					<span id="district-pin">Trivandrum &#8208 673103</span>
 				</div>
 			</div>
 		</div>
@@ -395,12 +393,17 @@
 
 				<!-- Section header -->
 				<div class="section-header text-center">
-					<h2 class="title">Welcome to ECAS</h2>
+					<h2 class="title">Genesis of ECAS</h2>
 				</div>
 				<!-- /Section header -->
 
 				<!-- about -->
 				<div class="col-md-12">
+
+					<video class="afterglow" id="myvideo" width="100%" height="auto" controls poster="./img/g3.jpg">
+						<source type="video/mp4" src="http://afterglowplayer.com/sandbox/v1/afterglow_local_hd.mp4"/>
+					</video>
+					<!-- <video class="afterglow" id="myvideo" width="100%" height="auto" data-youtube-id="cFXGRjS8tEQ"></video> -->
 					<p style="text-align: justify;">Civilized men refused to adapt to the environment. Instead, they adapted their
 						environment to suit them. So they built
 						cities, infrastructure, machinery and developed culture &amp; traditions to make their life easy. The more they
@@ -417,8 +420,8 @@
 						and
 						developing with whatever was available to them by Mother Earth through their primitive skills and techniques for
 						survival.
+					</p>
 				</div>
-				</p>
 				<!-- /about -->
 
 			</div>
@@ -932,12 +935,51 @@
 		// Initialize and add the map
 		function initMap() {
 			// The location of Uluru
-			var uluru = { lat: -25.344, lng: 131.036 };
-			// The map, centered at Uluru
+			var locationMarkers = [
+				{
+					position: { lat: 13.0827, lng: 80.2707 },
+					title: 'chennai',
+					id: 1
+				},
+				{
+					position: { lat: 12.9716, lng: 77.5946 },
+					title: 'banglore',
+					id: 2
+				}
+			]
+			var adressList = [
+				{
+					pin: '670098',
+					district: 'thoothkudy',
+					place: 'chennai',
+					city: '7 street',
+					landmark: '4th floor'
+				},
+				{
+					pin: '6700775',
+					district: 'goodalloor',
+					place: 'banglore',
+					city: '7 street',
+					landmark: '4th floor'
+				}
+			]
+
+			var chennai = { lat: 13.0827, lng: 80.2707 };
+			var markers = [];
 			var map = new google.maps.Map(
-				document.getElementById('map'), { zoom: 4, center: uluru });
-			// The marker, positioned at Uluru
-			var marker = new google.maps.Marker({ position: uluru, map: map });
+				document.getElementById('map'), { zoom: 4, center: chennai });
+
+			locationMarkers.forEach(function (location) {
+				var marker = new google.maps.Marker({ position: location.position, map: map, title: location.title });
+				markers.push(marker);
+			});
+			markers.forEach(function (marker, i) {
+				google.maps.event.addListener(marker, 'click', function () {
+					document.getElementById('landmark').innerHTML = adressList[i].landmark + ' &#44 ' + adressList[i].place;
+					document.getElementById('place-adress').innerHTML = adressList[i].place;
+					document.getElementById('district-pin').innerHTML = adressList[i].district + ' &#8208 ' + adressList[i].pin;
+				});
+			});
 		}
 	</script>
 
@@ -946,9 +988,9 @@
 	</script>
 	<script type="text/javascript" src="js/main.js"></script>
 
-</body>
+	</body>
 
 
-<!-- Mirrored from colorlib.com/etc/creative-agency/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Sep 2018 18:17:29 GMT -->
+	<!-- Mirrored from colorlib.com/etc/creative-agency/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Sep 2018 18:17:29 GMT -->
 
 </html>

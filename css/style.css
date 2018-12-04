@@ -190,11 +190,12 @@ ul, ol {
 
 .section-header {
     position: relative;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 .section-header .title {
     text-transform: capitalize;
+    font-size: 25px;
 }
 
 .title:after {
@@ -1999,6 +2000,7 @@ header {
 .buy-now {
     display: flex;
     justify-content: center;
+    margin-top: 15px;
 }
 
 .quotes .cont {
@@ -2065,8 +2067,16 @@ header {
 .adress h1 {
     text-decoration: underline;
     font-size: 20px;
+    text-underline-position: under;
+    text-decoration-color: #6195FF;
+    text-decoration-line: underline;
 }
 
 .adress {
-    padding: 20%;
+    padding-top: 20%;
+    padding-left: 20%;
+}
+
+.contact p {
+    text-align: center;
 }

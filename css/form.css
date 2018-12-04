@@ -27,8 +27,12 @@
 /*faces*/
 .cuboid-text {
 	/*each face will be 40px high*/
-	line-height: 40px; height: 40px;
+	line-height: 40px;
+	height: 40px;
 	background: #6195FF;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .loader {
 	background: hsl(120, 40%, 30%);
@@ -47,9 +51,12 @@
 #submit {display: none;}
 
 .submit-icon, .reset-icon {
-	position: absolute; top: 0; right: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
 	color: rgba(0, 0, 0, 0.25);
-	line-height: 40px; padding: 0 10px;
+	line-height: 44px;
+	padding: 0 10px;
 	/*smooth transitions when user activates input and types something*/
 	transition: all 0.5s;
 	/*to make the icons feel like buttons*/
@@ -57,7 +64,7 @@
 }
 /*.active = when the user is typing something*/
 .submit-icon.active {color: hsl(120, 40%, 30%);}
-.reset-icon {color: rgba(255, 255, 255, 0.25); font-size: 14px;}
+.reset-icon {color: rgba(255, 255, 255, 0.25);font-size: 14px;}
 
 #cuboid div {position: absolute; top: 0; left: 0; width: 100%;}
 /*3D transforms. Each face will be rotated in multiples of -90deg and moved 20px(half of their 40px height) out*/
