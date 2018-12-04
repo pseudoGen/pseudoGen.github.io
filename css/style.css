@@ -659,7 +659,7 @@ header {
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 50%;
+    top: 60%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -2004,15 +2004,15 @@ header {
 }
 
 .quotes .cont {
-    height: 100px;
-    border: solid 1px black;
+    /* height: 100px; */
+    /* border: solid 1px black; */
     margin-bottom: 10px;
-    background-color: #354052;
+    /* background-color: #354052; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-basis: 30%;
-    border-radius: 5px;
+    /* border-radius: 5px; */
 }
 
 .list {
@@ -2022,9 +2022,9 @@ header {
 }
 
 .cont p {
-    color: wheat;
+    /* color: wheat; */
     text-align: center;
-    margin: 0
+    margin: 0;
 }
 
 @media only screen and (max-width: 768px) {
@@ -2083,29 +2083,114 @@ header {
 .contact p {
     text-align: center;
 }
-.quote-img{
+
+.quote-img {
     /* display: flex; */
     /* justify-content: center; */
     /* flex-direction: column; */
     /* align-items: center; */
 }
-.quote-img img{
+
+.quote-img img {
     width: 100%;
     height: auto;
     padding-bottom: 20px;
 }
-.small-h{
+
+.small-h {
     font-size: 20px !important;
 }
-p{
-    font-size: 15px ;
+
+p {
+    font-size: 15px;
 }
+
 @media only screen and (max-width: 768px) {
-    p{
-        font-size: 13px ;
+    p {
+        font-size: 13px;
     }
 }
-.story{
+
+@media only screen and (max-width: 1000px) {
+    .hide-1000 {
+        display: none !important;
+    }
+}
+
+.story {
     margin-bottom: 5%;
     padding-bottom: 5%;
+}
+
+.animated-border-quote {
+    display: inline-block;
+    margin: 1em;
+    max-width: 20em;
+    overflow: hidden;
+}
+
+.animated-border-quote blockquote {
+    background-color: #fff;
+    border: solid 2px #757575;
+    display: inline-block;
+    margin: 0;
+    padding: 1em;
+    position: relative;
+}
+
+.animated-border-quote blockquote:before {
+    animation: clockwise 30s infinite linear;
+    background-color: #fff;
+    bottom: 10%;
+    content: "";
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 10%;
+}
+
+.animated-border-quote blockquote:after {
+    animation: counter 30s infinite linear;
+    background-color: #fff;
+    bottom: 10%;
+    content: "";
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 10%;
+}
+
+.animated-border-quote blockquote cite {
+    display: block;
+    font-style: italic;
+    text-align: right;
+}
+
+.animated-border-quote blockquote cite:before {
+    content: "- ";
+}
+
+.animated-border-quote blockquote>* {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes clockwise {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes counter {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }
