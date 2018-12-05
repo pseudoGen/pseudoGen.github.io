@@ -12,7 +12,7 @@
     width: 400px;
     margin: 0 auto;
     /*this also makes #cuboid a container for absolutely positioned descendants*/
-    perspective: 1000px;
+    /* perspective: 1000px; */
 }
 
 #cuboid p {
@@ -52,6 +52,7 @@
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #B5AC49, #3CA55C);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),                  0px -5px 35px rgba(255,255,255,0.3);
 }
 
 .loader {

@@ -1171,6 +1171,7 @@ header {
 .blog {
     background-color: #FFF;
     margin: 15px 0px;
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
 }
 
 .blog .blog-content {
@@ -2076,19 +2077,42 @@ header {
 }
 
 .adress {
-    padding-top: 20%;
-    padding-left: 20%;
+    align-self: center;
 }
 
 .contact p {
     text-align: center;
 }
 
-.quote-img {
-    /* display: flex; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
-    /* align-items: center; */
+.quote-content {
+    display: flex;
+    align-items: center;
+}
+
+.quote-container, .map-container {
+    display: flex;
+}
+
+@media only screen and (max-width: 1000px) {
+    .quote-container, .map-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .map {
+        width: 100%;
+    }
+    .quote-img {
+        width: 100%;
+    }
+    .quote-content {
+        width: 100%;
+    }
+}
+
+.adress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .quote-img img {
@@ -2115,6 +2139,15 @@ p {
     .hide-1000 {
         display: none !important;
     }
+    .hide-1200 {
+        display: none !important;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .hide-1200 {
+        display: none !important;
+    }
 }
 
 .story {
@@ -2127,6 +2160,7 @@ p {
     margin: 1em;
     max-width: 20em;
     overflow: hidden;
+    box-shadow: 1px 1px 34px #120000;
 }
 
 .animated-border-quote blockquote {
@@ -2192,5 +2226,56 @@ p {
     }
     100% {
         transform: rotate(-360deg);
+    }
+}
+
+h1, h2 {
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2), 0px -5px 35px rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    /* make things invisible upon start */
+    animation: fadeIn ease-in 1;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    animation-duration: .7s;
+    animation-delay: .5s;
+}
+
+
+@keyframes fadeInWidth {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.fade-in-width {
+    width: 0;
+    /* make things invisible upon start */
+    animation: fadeInWidth ease-in 1;
+    /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    animation-fill-mode: forwards;
+    /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    animation-duration: 1s;
+    animation-delay: 0s;
+}
+@media only screen and (max-width: 768px) {
+    .fade-in-width {
+       width: 100%;
+        animation: none;
     }
 }
