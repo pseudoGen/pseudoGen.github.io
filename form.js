@@ -18,6 +18,7 @@ $("#email").keyup(function(){
 
 //on form submit remove .ready and add .loading to the form
 $("#cuboid form").submit(function(){
+	console.log('submitted');
 	$(this).removeClass("ready").addClass("loading");
 	//finish loading in 3s
 	setTimeout(complete, 3000);
